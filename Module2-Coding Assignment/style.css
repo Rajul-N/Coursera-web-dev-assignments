@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 100px 0;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.menu {
+  margin: 0 auto;
+}
+
+.menu-items {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.chicken,
+.beef,
+.sushi {
+  width: 30%;
+  background-color: gray;
+  border: 2px solid black;
+  position: relative;
+  padding: 30px 15px 15px 15px;
+  float: left;
+  margin: 0 1.5%;
+}
+
+.heading1,
+.heading2,
+.heading3 {
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: solid 2px black;
+  border-bottom: solid 2px black;
+  text-align: center;
+}
+
+.heading1 {
+  background-color: rgb(223, 131, 131);
+}
+
+.heading2 {
+  background-color: rgb(172, 79, 79);
+  color: white;
+}
+
+.heading3 {
+  background-color: rgb(235, 211, 151);
+}
+
+h3 {
+  padding-top: 2px;
+}
+
+p {
+  padding: 10px 0px;
+  text-align: left;
+  font-size: 16px;
+}
+/* Desktop media queries */
+@media (min-width: 992px) {
+.menu-items {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .chicken,
+  .beef,
+  .sushi {
+    width: 30%;
+    background-color: gray;
+    border: 2px solid black;
+    position: relative;
+    padding: 30px 15px 15px 15px;
+    float: left;
+    margin: 0 1.5%;
+  }
+}
+
+/* tablet media queries */
+@media (min-width: 768px) and (max-width: 991px) {
+.menu-items {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+.chicken,
+.beef,
+.sushi {
+  width: 48%;
+  /* Each section takes almost half the screen */
+  margin: 15px 1%;
+  /* Adds spacing between the boxes */
+  float: left;
+}
+
+.sushi {
+  width: 98%;
+  /* The third box (Sushi) will take full width in the second row */
+  float: none;
+  /* Prevents floating issues */
+  margin: 15px auto;
+  clear: both;
+  /* Ensures it moves to the next line */
+}
+
+p {
+  padding: 10px 10px;
+  text-align: left;
+}
+}
+
+/* Mobile media queries */
+@media (max-width: 767px) {
+  .menu-items {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+  .chicken,
+  .beef,
+  .sushi {
+  width: 98%;
+  /* Each section takes almost half the screen */
+  float: none;
+  margin: 15px auto;
+  /* Adds spacing between the boxes */
+  clear: both;
+    /* Ensures each takes full width */
+  }
+
+  p {
+  padding: 10px 5px;
+  text-align: left;
+  }
+}
